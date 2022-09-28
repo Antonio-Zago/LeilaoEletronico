@@ -17,6 +17,10 @@ public class Imovel {
 	@ManyToOne
 	@JoinColumn(name = "idTipoImovel")
 	private TipoImovel tipoImovel;
+	
+	@ManyToOne
+	@JoinColumn(name = "idLeilao")
+	private Leilao leilao;
 
 	private String endereco;
 	
@@ -30,6 +34,14 @@ public class Imovel {
 	
 	
 	
+	public Leilao getLeilao() {
+		return leilao;
+	}
+
+	public void setLeilao(Leilao leilao) {
+		this.leilao = leilao;
+	}
+
 	public String getEndereco() {
 		return endereco;
 	}
